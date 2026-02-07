@@ -1,1 +1,27 @@
+body {
+  background-image: url("site-background.jpg");
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+#chat {
+  width: 400px;
+  margin: 50px auto;
+  background: rgba(0,0,0,0.7);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.msg.user { color: #7dd3fc; }
+.msg.ai { color: #f9a8d4; }
+input, button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+button { background: #a855f7; color: white; cursor: pointer; }
+button:hover { background: #9333ea; }
 
