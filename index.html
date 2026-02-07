@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Мій AI чат</title>
+  <style>
+    body {
+      background: #0f0f0f;
+      color: #fff;
+      font-family: Arial;
+    }
+    #chat {
+      width: 60%;
+      margin: auto;
+      margin-top: 40px;
+    }
+    .msg {
+      margin: 10px 0;
+    }
+    .user { color: #7dd3fc; }
+    .ai { color: #f9a8d4; }
+    input, button {
+      padding: 10px;
+      width: 100%;
+      margin-top: 10px;
+      background: #1f2933;
+      color: white;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+<div id="chat">
+  <div id="messages"></div>
+
+  <input id="input" placeholder="Напиши щось..." />
+  <button onclick="send()">Надіслати</button>
+</div>
+
+<script>
+async function send() {
+  const input = document.getElementById("input");
+  const text = input.value;
+  input.value = "";
+
+  const messages = document.getElementById("messages");
+  messages.innerHTML += `<div class="msg user">Ти: ${text}</div>`;
+
+  // тимчасова відповідь
+  messages.innerHTML += `<div class="msg ai">AI: (тут буде відповідь)</div>`;
+}
+</script>
+
+</body>
+</html>
